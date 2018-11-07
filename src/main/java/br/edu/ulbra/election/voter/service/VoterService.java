@@ -142,6 +142,20 @@ public class VoterService {
         if (StringUtils.isBlank(voterInput.getName())){
             throw new GenericOutputException("Invalid name");
         }
+          /*
+        expressões para matches
+        ^ verifica se a expressão começa com
+        (?i: inicia um grupo com case-insensitive
+        [a-z]+ verifica palavras com as letras de a-z até encontrar um espaço (note que após o + tem um espaço)
+        [a-z ]+) verifica palavras com as letras de a-z e espaços, ou seja pode conter mais de uma palavra com espaço até encontrar o final do grupo (grupo para case-insensitive)
+        $ verifica se a string termina exatamente conforme a expressão
+         */
+        if (!voterInput.getName().matches("^(?i:[a-z]+ [a-z ]+)$")){
+            throw new GenericOutputException("Need a last name");
+        }
+        if (voterInput.getName().length() < 5){
+            throw new GenericOutputException("Invalid name. Min. 5 letters");
+        }
         if (!StringUtils.isBlank(voterInput.getPassword())){
             if (!voterInput.getPassword().equals(voterInput.getPasswordConfirm())){
                 throw new GenericOutputException("Passwords doesn't match");
