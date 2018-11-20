@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/java,gradle,eclipse,intellij
 
@@ -151,6 +152,8 @@ fabric.properties
 .idea/sonarlint
 
 ### Java ###
+=======
+>>>>>>> 2572536716e2f301c1cbe7dcdcb66295c9c4f5cc
 # Compiled class file
 *.class
 
@@ -174,6 +177,7 @@ fabric.properties
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 
 ### Gradle ###
 .gradle
@@ -196,3 +200,5 @@ gradle-app.setting
 
 
 # End of https://www.gitignore.io/api/java,gradle,eclipse,intellij
+=======
+>>>>>>> 2572536716e2f301c1cbe7dcdcb66295c9c4f5cc
